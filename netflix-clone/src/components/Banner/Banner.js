@@ -14,7 +14,7 @@ const Banner = () => {
         const request = await axios.get(requests.fetchNetflixOriginals);
         setMovie(
           request.data.results[
-            Math.floor(Math.random() * request.data.results.length)
+          Math.floor(Math.random() * request.data.results.length)
           ],
         );
       } catch (error) {
@@ -41,7 +41,7 @@ const Banner = () => {
           <button className="banner_button">Play</button>
           <button className="banner_button">My List</button>
         </div>
-        <h1 className="banner_description">{truncate(movie?.overview, 150)}</h1>
+        <p className="banner_description">{truncate(movie?.overview, 150)}</p>
       </div>
       <div className="banner_fadeBottom" />
     </div>
