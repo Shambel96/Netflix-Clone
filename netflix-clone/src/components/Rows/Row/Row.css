@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row_outer_container {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+.row_title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: left;
+}
+.row_inner_container {
+    overflow-x: scroll;
+    padding-bottom: 10px;
+}
+.row_inner_container::-webkit-scrollbar {
+    display: none;
+}
+.row_poster {
+    width: 150px;
+    max-height: 200px;
+    object-fit: contain;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.row_poster:hover {
+    transform: scale(1.1);
+}
+.row_poster_large {
+    width: 200px;
+    max-height: 300px;
+}
+.row_poster_large:hover {
+    transform: scale(1.1);
+}
+
