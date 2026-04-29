@@ -1,6 +1,6 @@
 import React from "react";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import SubscriptionsOutlinedIcon from "@mui/icons-material/SubscriptionsOutlined";
+import YouTubeIcon from '@mui/icons-material/YouTube';import InstagramIcon from '@mui/icons-material/Instagram';
 import "./Footer.css";
 function Footer() {
   return (
@@ -10,8 +10,8 @@ function Footer() {
           <ul>
             <li className="social-icons">
               <FacebookOutlinedIcon />
-              <SubscriptionsOutlinedIcon />
-              <SubscriptionsOutlinedIcon />
+              <YouTubeIcon />
+              <InstagramIcon />
             </li>
             <li>Audio and Subtitles</li>
             <li>Audio Description</li>
