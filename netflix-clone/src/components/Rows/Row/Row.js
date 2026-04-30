@@ -2,7 +2,6 @@ import React from "react";
 import "./Row.css";
 import { useState, useEffect } from "react";
 import axios from "../../../utils/axios";
-import requests from "../../../utils/request";
 import movieTrailer from "movie-trailer";
 import YouTube from "react-youtube";
 const Row = ({ title, fetchUrl, isLargeRow }) => {
@@ -53,7 +52,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
               key={movie.id}
               src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
               alt={movie.name}
-              className={`row_poster ${isLargeRow && "row_posterLarge"}`}
+              className={`row_poster ${isLargeRow ? "row_poster_large" : ""}`}
             />
           ))}
         </div>

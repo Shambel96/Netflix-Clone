@@ -1,41 +1,58 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .row_outer_container {
-    margin-top: 20px;
-    padding: 0 20px;
+    padding: 14px 0;
 }
 .row_title {
-    font-size: 30px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    margin: 0 0 10px;
     color: #fff;
     text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.2px;
 }
 .row_inner_container {
-    overflow-x: scroll;
-    padding-bottom: 10px;
+    width: 100%;
 }
-.row_inner_container::-webkit-scrollbar {
+.row_posters{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 4px 2px 10px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.row_posters::-webkit-scrollbar {
     display: none;
 }
 .row_poster {
-    width: 150px;
-    max-height: 200px;
-    object-fit: contain;
-    margin-right: 10px;
-    transition: transform 0.3s ease;
+    width: 160px;
+    height: 90px;
+    flex: 0 0 auto;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 180ms ease, box-shadow 180ms ease;
     cursor: pointer;
 }
 .row_poster:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
 }
 .row_poster_large {
-    width: 200px;
-    max-height: 300px;
+    width: 150px;
+    height: 225px;
 }
 .row_poster_large:hover {
-    transform: scale(1.1);
+    transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce){
+    .row_posters{
+        scroll-behavior: auto;
+    }
+    .row_poster{
+        transition: none;
+    }
 }
 
