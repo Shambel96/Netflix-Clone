@@ -1,11 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .header_outer_container{
     width: 100%;
-    height: 80px;
+    --header-height: 80px;
+    height: var(--header-height);
     position: fixed;
     top: 0;
     left: 0;
@@ -21,76 +17,168 @@
     background: #111;
 }
 .header_inner_container{
-    width: 90%;
+    width: 100%;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 0 72px;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.header_left ul{
+.header_left{
     display: flex;
-    list-style: none;
-    gap: 20px;
     align-items: center;
-}
-.header_left ul li{
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.2px;
-    cursor: pointer;
-    opacity: 0.9;
-    transition: opacity 150ms ease, color 150ms ease;
-    user-select: none;
-}
-.header_left ul li:hover{
-    opacity: 1;
+    gap: 18px;
+    min-width: 0;
 }
 .netflix_logo{
     width: 110px;
     height: auto;
     display: block;
 }
-.header_right ul{
+
+.header_nav_list{
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 18px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header_nav_link{
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    padding: 8px 0;
+    user-select: none;
+    transition: color 150ms ease, opacity 150ms ease;
+}
+.header_nav_link:hover{
+    color: rgba(255, 255, 255, 1);
+}
+.header_nav_link:focus-visible{
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+.header_right{
+    display: flex;
     color: #fff;
     align-items: center;
+    gap: 14px;
 }
-.header_right ul li{
+
+.header_icon_button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
     color: #fff;
-    font-size: 22px;
     cursor: pointer;
     opacity: 0.9;
     transition: opacity 150ms ease;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
-.header_right ul li:hover{
+.header_icon_button:hover{
     opacity: 1;
+}
+.header_icon_button:focus-visible{
+    outline: 2px solid rgba(255, 255, 255, 0.55);
+    outline-offset: 2px;
+}
+
+.header_mobile_only{
+    display: none;
+}
+
+.header_backdrop{
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    background: rgba(0, 0, 0, 0.55);
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px){
+    .header_inner_container{
+        padding: 0 28px;
+    }
+    .header_nav_list{
+        gap: 14px;
+    }
+    .header_nav_link{
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 900px){
-    .header_inner_container{
-        width: 94%;
-    }
-    .header_left ul{
-        gap: 14px;
-    }
-    .header_left ul li:nth-child(n+7){
-        display: none;
+    .header_outer_container{
+        --header-height: 68px;
     }
     .netflix_logo{
         width: 100px;
     }
-}
-
-@media (max-width: 600px){
-    .header_left ul li:nth-child(n+5){
+    .header_desktop_only{
         display: none;
     }
-    .header_right ul{
-        gap: 14px;
+    .header_mobile_only{
+        display: flex;
+    }
+    .header_nav{
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        padding: 14px 0 18px;
+        background: rgba(17, 17, 17, 0.98);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        transform: translateY(-8px);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 160ms ease, opacity 160ms ease;
+    }
+    .header_nav_open{
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .header_nav_list{
+        width: 100%;
+        padding: 0 18px;
+        margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    .header_nav_link{
+        width: 100%;
+        padding: 10px 2px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px){
+    .header_outer_container{
+        --header-height: 62px;
+    }
+    .netflix_logo{
+        width: 92px;
+    }
+    .header_inner_container{
+        padding: 0 12px;
+    }
+    .header_right{
+        gap: 10px;
     }
 }
