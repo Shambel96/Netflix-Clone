@@ -1,49 +1,116 @@
 import React from "react";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import YouTubeIcon from '@mui/icons-material/YouTube';import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import "./Footer.css";
 function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <div className="footer_outer_container">
+    <footer className="footer_outer_container">
       <div className="footer_inner_container">
-        <div className="first-div">
+        <div className="footer_social" aria-label="Social links">
+          <button
+            type="button"
+            className="footer_social_button"
+            aria-label="Facebook"
+          >
+            <FacebookOutlinedIcon />
+          </button>
+          <button
+            type="button"
+            className="footer_social_button"
+            aria-label="YouTube"
+          >
+            <YouTubeIcon />
+          </button>
+          <button
+            type="button"
+            className="footer_social_button"
+            aria-label="Instagram"
+          >
+            <InstagramIcon />
+          </button>
+        </div>
+
+        <div className="footer_links" aria-label="Footer links">
           <ul>
-            <li className="social-icons">
-              <FacebookOutlinedIcon />
-              <YouTubeIcon />
-              <InstagramIcon />
+            <li>
+              <button type="button" className="footer_link">
+                Audio and Subtitles
+              </button>
             </li>
-            <li>Audio and Subtitles</li>
-            <li>Audio Description</li>
-            <li>Help Center</li>
+            <li>
+              <button type="button" className="footer_link">
+                Audio Description
+              </button>
+            </li>
+            <li>
+              <button type="button" className="footer_link">
+                Help Center
+              </button>
+            </li>
           </ul>
-        </div>
-        <div className="second-div">
+
           <ul>
-            <li>Gift Cards</li>
-            <li>Media Center</li>
-            <li>Investor Relations</li>
-            <li>Jobs</li>
+            <li>
+              <button type="button" className="footer_link">
+                Gift Cards
+              </button>
+            </li>
+            <li>
+              <button type="button" className="footer_link">
+                Media Center
+              </button>
+            </li>
+            <li>
+              <button type="button" className="footer_link">
+                Investor Relations
+              </button>
+            </li>
+            <li>
+              <button type="button" className="footer_link">
+                Jobs
+              </button>
+            </li>
           </ul>
-        </div>
-        <div className="third-div">
+
           <ul>
-            <li>Terms of Use</li>
-            <li>Privacy</li>
-            <li>Legal Notices</li>
+            <li>
+              <button type="button" className="footer_link">
+                Terms of Use
+              </button>
+            </li>
+            <li>
+              <button type="button" className="footer_link">
+                Privacy
+              </button>
+            </li>
+            <li>
+              <button type="button" className="footer_link">
+                Legal Notices
+              </button>
+            </li>
           </ul>
-        </div>
-        <div className="fourth-div">
+
           <ul>
-            <li>Cookie Preferences</li>
-            <li>Corporate Information</li>
+            <li>
+              <button type="button" className="footer_link">
+                Cookie Preferences
+              </button>
+            </li>
+            <li>
+              <button type="button" className="footer_link">
+                Corporate Information
+              </button>
+            </li>
           </ul>
         </div>
       </div>
-      <div className="fifth-div">
-        <p>&copy; 2024 Netflix App. All rights reserved.</p>
+      <div className="footer_bottom">
+        <p>&copy; {year} Netflix App. All rights reserved.</p>
       </div>
-    </div>
+    </footer>
   );
 }
 
