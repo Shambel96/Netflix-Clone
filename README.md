@@ -1,2 +1,2 @@
 # Netflix-Clone
-A netflix website clone 2024 from Evangadi.com
+A netflix website clone 2024 from Evangadi.com learning purpose
