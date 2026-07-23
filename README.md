@@ -91,43 +91,50 @@ The app will open at **http://localhost:3000**.
 ## Project Structure
 
 ```
-netflix-clone/
-├── public/
-├── src/
-│   ├── assets/
-│   │   └── images/
-│   │       └── netflix-logo.jpg
-│   ├── components/
-│   │   ├── Banner/
-│   │   │   ├── Banner.js
-│   │   │   └── banner.css
-│   │   ├── Footer/
-│   │   │   ├── Footer.js
-│   │   │   └── Footer.css
-│   │   ├── Header/
-│   │   │   ├── Header.js
-│   │   │   └── header.css
-│   │   └── Rows/
-│   │       ├── Row/
-│   │       │   ├── Row.js
-│   │       │   └── Row.css
-│   │       └── RowList/
-│   │           ├── RowList.js
-│   │           └── RowList.css
-│   ├── pages/
-│   │   └── Home/
-│   │       └── Home.js
-│   ├── utils/
-│   │   ├── axios.js
-│   │   └── request.js
-│   ├── App.js
-│   ├── App.css
-│   ├── index.js
-│   └── index.css
-├── .env
-├── .gitignore
-├── package.json
-└── README.md
+Netflix-Clone/
+├── README.md
+├── netflix-clone/
+│   ├── public/
+│   │   ├── index.html
+│   │   ├── logo.png
+│   │   ├── manifest.json
+│   │   ├── netflix-logo-netflix-icon-free-free-vector.jpg
+│   │   └── robots.txt
+│   ├── src/
+│   │   ├── assets/
+│   │   │   └── images/
+│   │   │       └── netflix-logo.jpg
+│   │   ├── components/
+│   │   │   ├── Banner/
+│   │   │   │   ├── Banner.js
+│   │   │   │   └── banner.css
+│   │   │   ├── Footer/
+│   │   │   │   ├── Footer.js
+│   │   │   │   └── Footer.css
+│   │   │   ├── Header/
+│   │   │   │   ├── Header.js
+│   │   │   │   └── header.css
+│   │   │   └── Rows/
+│   │   │       ├── Row/
+│   │   │       │   ├── Row.js
+│   │   │       │   └── Row.css
+│   │   │       └── RowList/
+│   │   │           ├── RowList.js
+│   │   │           └── RowList.css
+│   │   ├── pages/
+│   │   │   └── Home/
+│   │   │       └── Home.js
+│   │   ├── utils/
+│   │   │   ├── axios.js
+│   │   │   └── request.js
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   ├── index.js
+│   │   └── index.css
+│   ├── .gitignore
+│   ├── package.json
+│   └── package-lock.json
+└── .git/
 ```
 
 ## How It Works
